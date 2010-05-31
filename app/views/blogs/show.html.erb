@@ -1,0 +1,17 @@
+<% title "Blog" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @blog.cap_it %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%=h @blog.content %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_blog_path(@blog) %> |
+  <%= link_to "Destroy", @blog, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", blogs_path %>
+  <%= link_to "View All", :action => "index", :controller => "blogs" %>
+</p>
